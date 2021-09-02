@@ -1,4 +1,4 @@
 services:
     app:
-        image: debian
-        container_name: 'debian_container'
+        image: jenkins:lts-jdk11
+        container_name: 'jenkins_container'

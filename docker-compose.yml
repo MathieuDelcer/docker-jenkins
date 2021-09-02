@@ -1,4 +1,10 @@
+version: "3.5"
+
 services:
-    app:
-        image: jenkins:lts-jdk11
-        container_name: 'jenkins_container'
+  jenkins:
+    image: jenkins/jenkins:lts-jdk11
+    container_name: jenkins_container
+    restart: unless-stopped #docker redemarre le conteneur s'il plante, mais pas si l'admin l'arrête de lui même
+    ports:
+        - '8081:8080'
+        - '50000:50000'

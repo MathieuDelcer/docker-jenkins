@@ -1,1 +1,4 @@
-
+services:
+    app:
+        image: debian
+        container_name: 'debian_container'
